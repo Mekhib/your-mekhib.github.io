@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <heading>The psychic game</heading>
+    <div id = "Body">
+        <p>Guess what letter I'm thinking of</p>
+        <p id="wins">Wins: </p>
+        <p id="losses">Loses</p>
+        <p id="guessesleft">Guesses Left:</p>
+        <p id="guessessofar">guesses so far</p>
+    </div>
+    </body>
+<script type="text/javascript">
+var wins='';
+var losses='';
+var guessleft="";
+var guessessofar="";
+var winstext = document.getElementById("wins");
+var lossestext = document.getElementById("losses");
+var guesslefttext = document.getElementById("guessesleft");
+var guessessofartext = document.getElementById("guesssofar");
+var CC = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+var computerGuess = CC[Math.floor(Math.random() * CC.length)];
+console.log(CC);
+let compute = document.addEventListener(onkeypress,function(event){
+    var userguess = event.key;
+    if (userguess === computerGuess) {
+       var winstext = (winstext + wins++);
+        alert("You got lucky this time!");
+}
+   
+   else 
+       var lossestext = ( lossestext + losses++);
+console.log(userguess);
+console.log(computerGuess);
+})
+compute();
+    
+
+</script>
+</html>
